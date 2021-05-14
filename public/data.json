@@ -1,0 +1,79 @@
+[
+  {
+    "id": "*1ec37thd%wj!7%41#2@",
+    "name": "GSAP",
+    "subTopics": [
+      {
+        "id": "mlk1!1%1r#rj&n!v4w1*",
+        "name": "Tweens",
+        "properties": [
+          {
+            "id": "33h1@o@%e2*81cfu$@$a",
+            "title": "To Tweens",
+            "description": "The most common type of animation is a to() tween because it allows you to define the destination values (and most people think in terms of animating to certain values)",
+            "notes": [
+              "Performance is paramount, especially on mobile devices with sluggish processors",
+              "Silky smooth HTML5 javascript animation is the hallmark of any tweening engine worth its weight and GSAP outperforms old “industry standards” by literally 1000%+ under stress",
+              "What was jerky and twitchy is now fluid. It’s the result of countless optimizations made to ensure that your interactive projects are responsive, efficient, and buttery smooth"
+            ],
+            "code": "let tween = gsap.to(\".class\", {rotation: 360, duration: 5, ease: \"elastic\"});\n\n//now we can control it!\ntween.pause();\ntween.seek(2);\ntween.progress(0.5);\ntween.play();\n..."
+          }
+        ]
+      }
+    ],
+    "image": {
+      "src": "https://cdn.worldvectorlogo.com/logos/gsap-greensock.svg"
+    }
+  },
+  {
+    "id": "&974e@2s*4!f64kx@xwu",
+    "name": "Javascript",
+    "subTopics": [
+      {
+        "id": "816%iw1010#!71&xm*k3c1",
+        "name": "Async",
+        "properties": [
+          {
+            "id": "@!#@#7i&9d48c2m1@!$#",
+            "title": "To",
+            "description": "The most common type of animation is a to() tween because it allows you to define the destination values (and most people think in terms of animating to certain values)",
+            "notes": [
+              "JavaScript is the world's most popular programming language.",
+              "JavaScript is the programming language of the Web",
+              "JavaScript is easy to learn"
+            ],
+            "code": "let tween = gsap.to(\".class\", {rotation: 360, duration: 5, ease: \"elastic\"});\n\n//now we can control it!\ntween.pause();\ntween.seek(2);\ntween.progress(0.5);\ntween.play();\n..."
+          }
+        ]
+      }
+    ],
+    "image": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+    }
+  },
+  {
+    "id": "*$@1$7m19s&5v4j34&@@",
+    "name": "Photoshop",
+    "subTopics": [
+      {
+        "id": "duv1071*%c%tlsr1010a10cj",
+        "name": "Masks",
+        "properties": [
+          {
+            "id": "hk3b&31075k$6x!&w%3*!",
+            "title": "To",
+            "description": "The most common type of animation is a to() tween because it allows you to define the destination values (and most people think in terms of animating to certain values)",
+            "notes": [
+              "The most common type of animation is a to() tween because it allows you to define the destination values",
+              "The most common type of animation is a to() tween because it allows you to define the destination values",
+              "The most common type of animation is a to() tween because it allows you to define the destination values"
+            ]
+          }
+        ]
+      }
+    ],
+    "image": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/788px-Adobe_Photoshop_CC_icon.svg.png"
+    }
+  }
+]

@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import Main from './components/Main'
+import Entry from './components/Entry'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+
 
 function App() {
+
+  const [topicData, setTopicData] = useState([])
+
+  useEffect(() => {
+    async function fetchData() {
+      const result = await axios(
+        './data.json',
+      );
+      setTopicData(result.data)
+    }
+    fetchData();
+  }, [])
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Main topicData = {topicData} />
+    <Entry topicData = {topicData} />
+    </>
   );
 }
 

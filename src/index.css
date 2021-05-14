@@ -7,7 +7,1014 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+code,
+#code-edit {
+  font-family: monospace, source-code-pro, Menlo, Monaco, Consolas, 'Courier New'
+  ;
+}
+
+
+
+/* Sections
+	 ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+  background: #101010;
+  ;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+* {
+  outline: 0;
+  font: inherit;
+}
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  outline: none
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: none;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* Interactive
+	 ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* Box sizing
+--------------------------------------------- */
+
+/* Inherit box-sizing to more easily change it's value on a component level.
+@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: #404040;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--brand-dark)
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 50px
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+p {
+  margin-bottom: 1.5em;
+  font-family: var(--body-font);
+  font-size: 15px;
+  color: #404040
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", courier, monospace;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+/* Elements
+--------------------------------------------- */
+body {
+  background: #fff;
+}
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+  margin: 0 0 1.5em 3em;
+}
+
+ul {
+  list-style: disc;
+}
+
+li {
+  color: #FFF;
+  font-family: inherit;
+  font-size: 14px
+}
+
+ol {
+  list-style: decimal;
+}
+
+li>ul,
+li>ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+  color: var(--brand-primary-color);
+  text-decoration: none;
+}
+
+
+
+a:hover,
+a:focus,
+a:active {
+  opacity: 0.8;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* Forms
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1;
+  padding: 0.6em 1em 0.4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+  border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+}
+
+select {
+  border: 1px solid #ccc;
+}
+
+textarea {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+
+/* Accessibility
+--------------------------------------------- */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+
+  /*rtl:ignore*/
+  float: left;
+
+  /*rtl:ignore*/
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.alignright {
+
+  /*rtl:ignore*/
+  float: right;
+
+  /*rtl:ignore*/
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+}
+
+
+/* Text Styles
+--------------------------------------------- */
+.text-center {
+  text-align: center
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.black {
+  color: var(--brand-black);
+}
+
+.grey {
+  color: #111111;
+}
+
+
+/* Width
+--------------------------------------------- */
+.half-width {
+  width: 50%
+}
+
+.fill-container {
+  width: 100%;
+  height: 100%;
+}
+
+.full-screen-restrict {
+  width: 100vw;
+  height: 100vh;
+}
+
+.overflow-scroll {
+  overflow: scroll
+}
+
+
+/* Flex & Grid
+--------------------------------------------- */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex
+}
+
+/* Custom
+--------------------------------------------- */
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+  color: #efefef;
+  margin: 0;
+  padding: 0;
+  font-family: Nunito, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+
+.sidebar {
+  width: 25%;
+  height: 100%;
+  background: #444;
+}
+
+.content-container {
+  width: 75%;
+  height: 100%;
+  background: #333;
+  padding: 2rem;
+}
+
+.search-container {
+  background: #222;
+  padding: 5px;
+  height: 50px
+}
+
+.search-container input {
+  width: 80%;
+  background: #666;
+  border: unset;
+}
+
+.topic {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer
+}
+
+
+.topic p {
+  color: #FFF;
+  margin: unset;
+  padding: 0 10px;
+  pointer-events: none;
+}
+
+.topic a {
+  pointer-events: none;
+}
+
+.open-icon {
+  width: 20px;
+  height: 20px;
+  fill: #999999;
+}
+
+.tabbed {
+  margin-left: 15px;
+}
+
+
+.codeblock pre code {
+  font-family: monospace;
+  color: #FFFFFF;
+
+}
+
+.codeblock pre {
+  background: #555555;
+  padding: 2rem;
+}
+
+.add-info {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: teal;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: 50% 50%;
+}
+
+.add-info:hover {
+  transform: scale(1.1)
+}
+
+.add-info svg {
+  width: 40px;
+  height: 40px;
+  fill: #efefef;
+  stroke: #efefef;
+  pointer-events: none;
+}
+
+.sub-topic-container {
+  padding-left: 30px;
+}
+
+.hidden {
+  display: none
+}
+
+.property-container {
+  padding: 0 30px;
+  background: #333
+}
+
+.topic-image {
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.topic-title {
+  margin: 0 0 1rem;
+  pointer-events: none;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+}
+
+.line {
+  height: 1px;
+  width: 80%;
+  margin: 1rem 0 2rem;
+  background: #777
+}
+
+.entry {
+  position: absolute;
+  width: 90vw;
+  height: 90vh;
+  z-index: 2;
+  background: #222;
+  color: #FFF;
+  top: 5vh;
+  left: 5vw;
+}
+
+.entry form {
+  width: 80%;
+  margin: auto;
+  height: 70%;
+  margin: 2rem
+}
+
+.topic-notes {
+  margin-bottom: 5rem
+}
+
+.edit-button-box {
+  display: flex;
+  width: 100px;
+}
+
+
+
+button.edit,
+button.add,
+button.remove {
+  background: #444;
+  color: #FFF;
+  padding: 2px;
+  font-size: 10px;
+  margin-left: 5px;
+  opacity: 0.2;
+  cursor: pointer
+}
+
+.content-container button:hover {
+  opacity: 0.5
+}
+
+.topic-notes li,
+.description,
+#code,
+.codeblock pre {
+  position: relative
+}
+
+.button-box {
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  display: inline-block;
+}
+
+.topic-notes li {
+  margin-right: 20px
+}
+
+.topic-container {
+  height: calc(100% - 50px);
+  padding: 1rem
+}
+
+.selection-wrapper {
+  text-align: center;
+}
+
+.selection-wrapper button {
+  margin: 2rem;
+  cursor: pointer
+}
+
+.input-wrapper button {
+  cursor: pointer
+}
+
+.input-container {
+  margin: 10px 0;
+  width: 100%;
+  position: relative;
+}
+
+.input-container input,
+.input-container select {
+  width: 100%;
+  min-height: 30px;
+  border-radius: 5px
+}
+
+.input-container label {
+  position: absolute;
+  right: -70%;
+  text-align: left;
+  opacity: 0.3;
+  font-size: 14px;
+  width: 200px;
+}
+
+body {
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  overflow: hidden;
+}
+
+button#submit {
+  float: right;
+  margin-top: 50px
+}
+
+input:focus~label,
+textarea:focus~label {
+  opacity: 0.6
+}
+
+.property {
+  cursor: pointer;
+  padding: 2px 0
 }
