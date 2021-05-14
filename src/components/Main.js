@@ -7,7 +7,6 @@ export const chosenTopicContext = React.createContext()
 
 const Main = ({topicData}) => {
   const [chosenTopic, setChosenTopic] = useState('none')
-  const [notes, setNotes] = useState([])
 
   function chooseTopic(id) {
     topicData.forEach(parentTopic => {
@@ -16,7 +15,6 @@ const Main = ({topicData}) => {
         return subTopic.properties.forEach((property) => {
           if(property.id === id) {
             setChosenTopic(property)
-            setNotes(property.notes)
             }
         })
       })
@@ -32,10 +30,7 @@ const Main = ({topicData}) => {
               topicData={topicData} 
               handleClick={chooseTopic} 
               />
-            <ContentContainer 
-              setNotes={setNotes} 
-              notes={notes}
-              />
+            <ContentContainer />
           </chosenTopicContext.Provider>
         </div>
         <AddInfoBtn />

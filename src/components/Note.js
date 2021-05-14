@@ -1,14 +1,41 @@
-import React, {useState, useEffect, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import ModifierBtn from './ModifierBtn'
 import {chosenTopicContext} from './Main'
 
 const Note = (props) => {
   const {chosenTopic, setChosenTopic} = useContext(chosenTopicContext)
-
-  const {note, editNote, id} = props
+  const {notes} = chosenTopic
+  const {note, id, addButton} = props
   const [isEditable, setIsEditable] = useState(false)
-  useEffect(()=>{console.log(chosenTopic)}, [chosenTopic])
-  
+
+  useEffect(() => {
+    (isEditable && document.addEventListener("click", handleOutsideClick))
+    return () => {document.removeEventListener("click", handleOutsideClick)}
+  }, [isEditable])
+
+  const handleOutsideClick = (e) => {
+    if(!e.target.classList.contains("text-input"))
+    setIsEditable(false)
+  }
+
+  const editNote = (id, newNoteText) => {
+    if (!newNoteText) return
+    const newNotes = [...notes]
+    newNotes[id] = newNoteText
+    const newTopic = {...chosenTopic}
+    newTopic.notes = newNotes
+    setChosenTopic(newTopic)
+  }
+
+  const addNote = () => {
+    console.log('added')
+    const newNote = 'Add note'
+    const newNotes = [...notes,newNote]
+    const newTopic = {...chosenTopic}
+    newTopic.notes = newNotes
+    setChosenTopic(newTopic)
+  }
+
 
   return (
     !isEditable ? 
@@ -16,20 +43,25 @@ const Note = (props) => {
       {note}
       <ModifierBtn 
         modType="Edit" 
-        editNote={editNote} 
         isEditable={isEditable} 
-        onClick={setIsEditable}
+        onClick={()=>setIsEditable(true)}
       />
+      {addButton && 
+        <ModifierBtn
+        modType="Add" 
+        onClick={addNote}
+        />}
     </li> :
     <input 
-        className="noteInput"
+        className="text-input"
         type="text" 
         defaultValue={note}
         placeholder={note} 
         onKeyDown={(e) => {
-          if (e.keyCode === 13) {
+          if (e.key === "Enter") {
+            console.log(e)
             setIsEditable(false);
-            // editNote(id, e.target.value)
+            editNote(id, e.target.value)
     }}}
     />
   )
