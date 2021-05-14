@@ -31,7 +31,9 @@ const ContentContainer = (props) => {
     localStorage.setItem("notes", newNotes)
   }
 
- 
+ const x = ()=> {
+   console.log('yo!')
+ }
  
 
   return (
