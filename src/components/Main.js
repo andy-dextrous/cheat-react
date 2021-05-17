@@ -4,6 +4,7 @@ import AddInfoBtn from './AddInfoBtn'
 import ContentContainer from './ContentContainer'
 // import {createId} from './../utilities/CreateId' 
 export const chosenTopicContext = React.createContext()
+export const topicDataContext = React.createContext()
 
 const Main = ({topicData}) => {
   const [chosenTopic, setChosenTopic] = useState('none')
@@ -22,19 +23,19 @@ const Main = ({topicData}) => {
   }
 
   return (
-
-      <main className="full-screen-restrict">
-        <div className="wrapper fill-container flex">
-          <chosenTopicContext.Provider value={{chosenTopic, setChosenTopic}}>
-            <Sidebar 
-              topicData={topicData} 
-              handleClick={chooseTopic} 
-              />
-            <ContentContainer />
-          </chosenTopicContext.Provider>
-        </div>
-        <AddInfoBtn />
-      </main>
+    <topicDataContext.Provider value={topicData}>
+      <chosenTopicContext.Provider value={{chosenTopic, setChosenTopic}}>
+        <main className="full-screen-restrict">
+          <div className="wrapper fill-container flex">
+              <Sidebar 
+                handleClick={chooseTopic} 
+                />
+              <ContentContainer />
+          </div>
+          <AddInfoBtn />
+        </main>
+      </chosenTopicContext.Provider>
+    </topicDataContext.Provider>
 
   )
 }

@@ -35,7 +35,7 @@
         "properties": [
           {
             "id": "@!#@#7i&9d48c2m1@!$#",
-            "title": "To",
+            "title": "Fetch",
             "description": "The most common type of animation is a to() tween because it allows you to define the destination values (and most people think in terms of animating to certain values)",
             "notes": [
               "JavaScript is the world's most popular programming language.",
@@ -61,7 +61,7 @@
         "properties": [
           {
             "id": "hk3b&31075k$6x!&w%3*!",
-            "title": "To",
+            "title": "Opacity Masks",
             "description": "The most common type of animation is a to() tween because it allows you to define the destination values (and most people think in terms of animating to certain values)",
             "notes": [
               "The most common type of animation is a to() tween because it allows you to define the destination values",

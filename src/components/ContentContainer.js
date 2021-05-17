@@ -1,5 +1,4 @@
 import React, {useContext} from 'react'
-import ModifierBtn from './ModifierBtn'
 import Note from './Note'
 import CodeBlock from './CodeBlock'
 import {chosenTopicContext} from './Main'

@@ -5,7 +5,7 @@ import {chosenTopicContext} from './Main'
 const CodeBlock = ({code}) => {
   const {chosenTopic, setChosenTopic} = useContext(chosenTopicContext)
   const [isEditable, setIsEditable] = useState(false)
-  let textAreaStyle = {background:'#666', border:'none', color:'#FFF', padding:'2rem'}
+  let textAreaStyle = {background:'#666', border:'none', color:'#FFF', padding:'2rem', minHeight:'300px'}
 
   useEffect(() => {
     (isEditable && document.addEventListener("click", handleOutsideClick))

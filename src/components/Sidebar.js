@@ -1,14 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Topic from './Topic'
+import Search from './Search'
+import {topicDataContext} from './Main'
 
-const Sidebar = ({topicData, handleClick}) => {
 
+const Sidebar = ({handleClick}) => {
+const topicData = useContext(topicDataContext)
+  console.log(topicData)
   return (
  
-    <aside className="sidebar" id="sidebar">
-      <div className="search-container full-width flex-center">
-        <input type="text" name="search" id="search" />
-      </div>
+    <aside className="sidebar" id="sidebar" style={{position:"relative"}}>
+      <Search />
       <div className="topic-container">
           { topicData.map(topic => 
             { return <Topic 

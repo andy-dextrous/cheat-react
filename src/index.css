@@ -786,6 +786,22 @@ a {
   height: 50px
 }
 
+.search-container ul {
+  margin: 0;
+  padding: 10px
+}
+
+.search-container li {
+  color: #222222;
+  padding-bottom: 5px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.search-container li:hover {
+  background: #999
+}
+
 .search-container input {
   width: 80%;
   background: #666;
@@ -848,8 +864,10 @@ a {
   transform-origin: 50% 50%;
 }
 
-.add-info:hover {
-  transform: scale(1.1)
+.add-info:hover,
+.add-info:hover svg {
+  transform: scale(1.1);
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0)
 }
 
 .add-info svg {

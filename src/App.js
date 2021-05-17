@@ -2,12 +2,14 @@ import './index.css';
 import Main from './components/Main'
 import Entry from './components/Entry'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
+export const addingContentContext = React.createContext()
 
 function App() {
 
   const [topicData, setTopicData] = useState([])
+  const [isAddingContent, setIsAddingContent] = useState(false)
 
   useEffect(() => {
     async function fetchData() {
@@ -20,13 +22,13 @@ function App() {
   }, [])
 
 
-
-
   return (
-    <>
+<addingContentContext.Provider value={{isAddingContent, setIsAddingContent}}>
+  <>
     <Main topicData = {topicData} />
     <Entry topicData = {topicData} />
-    </>
+  </>
+</addingContentContext.Provider>
   );
 }
 

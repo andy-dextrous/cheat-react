@@ -1,14 +1,21 @@
 import React, {useContext} from 'react'
 import ThemeContext from './Main'
+import {addingContentContext} from '../App'
 
 
 const AddInfoBtn = () => {
 
   const theme = useContext(ThemeContext)
+  const {isAddingContent, setIsAddingContent} = useContext(addingContentContext)
 
 
   return (
-    <button style={theme} className="add-info flex-center" id="add-content">
+    <button 
+      style={theme} 
+      className="add-info flex-center" 
+      id="add-content"
+      onClick={()=>{setIsAddingContent(!isAddingContent)}}
+      >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
       className="feather feather-plus">

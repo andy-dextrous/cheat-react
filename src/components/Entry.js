@@ -1,8 +1,29 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
+import {addingContentContext} from '../App'
+import gsap from 'gsap'
 
 const Entry = () => {
+const {isAddingContent} = useContext(addingContentContext)
+
+useEffect(() => {
+  gsap.set('#entry-form', {xPercent:200, yPercent:200})
+}, [])
+
+useEffect(() => {
+  const entry = document.getElementById('entry-form')
+  isAddingContent && entry.classList.remove("hidden")
+  gsap.to(entry, {
+    duration:0.3, 
+    xPercent: isAddingContent? 0 : 200, 
+    yPercent: isAddingContent? 0 : 200, 
+    onComplete: () => {
+      (!isAddingContent && entry.classList.add("hidden"))
+    }
+  })
+}, [isAddingContent])
+
   return (
-    <div className="entry hidden" id="entry-form">
+    <div className={"entry hidden"} id="entry-form">
     <div className="wrapper fill-container flex-center">
       <form className="flex-center" action="data.json">
         <div className="selection-wrapper">
